@@ -20,28 +20,38 @@
     var CONFIG = {"hostname":"upaskun.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="upa4的窝">
-<meta property="og:url" content="https://upaskun.github.io/index.html">
+  <meta name="description" content="array移除元素 快慢指针法  1234567891011func removeElement(nums []int, val int) int&#123;    slow :&#x3D; 0    for fast:&#x3D;0;fast&lt;len(nums);fast++&#123;        if nums[fast] &#x3D;&#x3D; val&#123;            continue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode_easy">
+<meta property="og:url" content="https://upaskun.github.io/2024/01/04/leetcode-easy/index.html">
 <meta property="og:site_name" content="upa4的窝">
+<meta property="og:description" content="array移除元素 快慢指针法  1234567891011func removeElement(nums []int, val int) int&#123;    slow :&#x3D; 0    for fast:&#x3D;0;fast&lt;len(nums);fast++&#123;        if nums[fast] &#x3D;&#x3D; val&#123;            continue">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upaskun.github.io/68747470733a2f2f636f64652d7468696e6b696e672e63646e2e626365626f732e636f6d2f676966732f3230362e2545372542462542422545382542442541432545392539332542452545382541312541382e676966.gif">
+<meta property="og:image" content="https://upaskun.github.io/68747470733a2f2f636f64652d7468696e6b696e672e63646e2e626365626f732e636f6d2f706963732f32342e254534254238254134254534254238254134254534254241254134254536253844254132254539253933254245254538254131254138254534254238254144254537253941253834254538.png">
+<meta property="og:image" content="https://upaskun.github.io/68747470733a2f2f636f64652d7468696e6b696e672d313235333835353039332e66696c652e6d7971636c6f75642e636f6d2f706963732f32303231313231393232313635372e706e67.png">
+<meta property="article:published_time" content="2024-01-04T11:23:29.000Z">
+<meta property="article:modified_time" content="2024-03-05T15:53:05.399Z">
 <meta property="article:author" content="upas">
+<meta property="article:tag" content="array">
+<meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upaskun.github.io/68747470733a2f2f636f64652d7468696e6b696e672e63646e2e626365626f732e636f6d2f676966732f3230362e2545372542462542422545382542442541432545392539332542452545382541312541382e676966.gif">
 
-<link rel="canonical" href="https://upaskun.github.io/">
+<link rel="canonical" href="https://upaskun.github.io/2024/01/04/leetcode-easy/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>upa4的窝</title>
+  <title>leetcode_easy | upa4的窝</title>
   
 
 
@@ -155,374 +165,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2024/02/01/CVE-2024-21626/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/02/01/CVE-2024-21626/" class="post-title-link" itemprop="url">CVE-2024-21626</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-02-01 20:14:11" itemprop="dateCreated datePublished" datetime="2024-02-01T20:14:11+08:00">2024-02-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-02-18 08:52:54" itemprop="dateModified" datetime="2024-02-18T08:52:54+08:00">2024-02-18</time>
-              </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>TAT漏洞披露才几个钟头啊，佬怎么poc都写好了…</p>
-<p>根据runc的描述, 漏洞成因是内部文件描述符泄漏。从runc v1.0.0-rc93开始，host上的<code>/sys/fs/cgroup</code> 就能在容器中看到了</p>
-<p>PoC非常简单，只需要将容器的WORKDIR设置为<code>/proc/self/fd/&lt;num&gt;</code>(<code>num</code>在不同的内核上可能会不同，大致在4~10的范围内)就会可以泄露host的fs。</p>
-<h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><h2 id="调用链分析"><a href="#调用链分析" class="headerlink" title="调用链分析"></a>调用链分析</h2><p>runc是如何处理用户设置的workdir的？为什么把<code>/proc/self/fd/xxx</code>的值设置为workdir就会出问题呢？<code>/proc/self/fd/xxx</code>和<code>/sys/fs/cgroup</code>又有什么关系呢?</p>
-<p><code>libcontainer/cgroups/file.go:prepareOpenat2</code></p>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>有一件非常奇怪的事情，poc只能在kernel版本&gt;&#x3D;5.4,&gt;&#x3D;4.19时才能触发，不是runc泄露了fd吗？和kernel版本有什么关系呢？</p>
-<ol>
-<li><a target="_blank" rel="noopener" href="https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv">https://github.com/opencontainers/runc/security/advisories/GHSA-xr7r-f8xq-vfvv</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/snyk/leaky-vessels-static-detector">https://github.com/snyk/leaky-vessels-static-detector</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/snyk/leaky-vessels-dynamic-detector">https://github.com/snyk/leaky-vessels-dynamic-detector</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/ssst0n3/c-listener(%E8%86%9C%E6%8B%9C%E5%B7%A8%E4%BD%AC!!)">https://github.com/ssst0n3/c-listener(膜拜巨佬!!)</a></li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2024/01/31/apue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/31/apue/" class="post-title-link" itemprop="url">apue</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-31 09:51:30 / 修改时间：12:52:34" itemprop="dateCreated datePublished" datetime="2024-01-31T09:51:30+08:00">2024-01-31</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">reading_notes</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h2><h3 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h3><p><code>fork()</code>函数被调用一次，返回两次，其中，子进程返回的值是<code>0</code>, 父进程返回的值是子进程的<code>id</code>。<br>子进程得到的是父进程数据空间、堆和栈的副本，子进程中对数据的更改不会影响到父进程。</p>
-<p>父进程和子进程共享同一个被打开文件的偏移量和文件表项。</p>
-<p><code>fork</code>的两种使用场景</p>
-<ol>
-<li>执行不同的代码段</li>
-<li>执行不同的程序</li>
-</ol>
-<p>如果父进程先于子进程结束，子进程的父进程会变为<code>init</code>进程;<br>如果子进程先结束，父进程可以通过<code>wait</code>或<code>waitpid</code>函数获取子进程的终止状态</p>
-<h3 id="IPC"><a href="#IPC" class="headerlink" title="IPC"></a>IPC</h3><h3 id="concurrent-programming"><a href="#concurrent-programming" class="headerlink" title="concurrent programming"></a>concurrent programming</h3>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2024/01/23/pwn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/23/pwn/" class="post-title-link" itemprop="url">pwn</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-23 17:11:14 / 修改时间：23:34:14" itemprop="dateCreated datePublished" datetime="2024-01-23T17:11:14+08:00">2024-01-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="堆利用"><a href="#堆利用" class="headerlink" title="堆利用"></a>堆利用</h2><h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><p>每个线程都会对应一个堆的内存分配区：Aerna</p>
-<p>chunk: 一块内存区域</p>
-<p>Bin: 本质是一个数组，用来管理暂时没有使用的chunk</p>
-<p>bin管理的chunk可以分为四类</p>
-<ol>
-<li>fast bin chunk</li>
-<li>small bin chunk: bins[2]~bins[63]</li>
-<li>unsorted bin chunk: bins[1]</li>
-<li>large bin chunk: bins[64]~bins[126]</li>
-</ol>
-<p><img src="/chunk.drawio.png" alt="Alt text"></p>
-<p>bins是一个数组，small, unsorted, large chunk bin的索引都存放在这个数组中<br>unsorted chunk bins用来存放暂时还没被分类的chunk, 除了fast chunk bin(单向，栈方式取用), 其余的chunk都是双向链表，取用时遵循队列</p>
-<p><em>使用malloc返回的是chunk的data字段的地址</em></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2024/01/19/todo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/19/todo/" class="post-title-link" itemprop="url">todo</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-01-19 14:58:29" itemprop="dateCreated datePublished" datetime="2024-01-19T14:58:29+08:00">2024-01-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-01-22 18:42:01" itemprop="dateModified" datetime="2024-01-22T18:42:01+08:00">2024-01-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Current-Thoughts"><a href="#Current-Thoughts" class="headerlink" title="Current Thoughts"></a>Current Thoughts</h2><h3 id="Runtime"><a href="#Runtime" class="headerlink" title="Runtime"></a>Runtime</h3><ul>
-<li><input disabled="" type="checkbox"> 插桩<ul>
-<li><input disabled="" type="checkbox"> 插桩的粒度单位为函数<br>  比如： 检测到调用链FuncA call filepath.Join  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">func FuncA(int a, int b)&#123;</span><br><span class="line">if I&gt;0&#123;</span><br><span class="line">	filepath.Join(a, b)</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	filepath.Join(b, c)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-  以dockerd的接口为起点，遍历调用图中与mnt namespace相关的节点<br>  会在函数FuncA的所有filepath.Join函数后进行插桩</li>
-<li><input disabled="" type="checkbox"> 插桩的内容<ol>
-<li>与kernel通信，告知要检测的文件的名称</li>
-<li>当前插桩点的位置信息</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><input disabled="" type="checkbox"> Fuzz<ul>
-<li><input disabled="" type="checkbox"> 对每个命令的入口函数都编写相应的Fuzz函数(体力活)……这样就能准确的进行code coverage测试了</li>
-</ul>
-</li>
-</ul>
-<h3 id="容器内"><a href="#容器内" class="headerlink" title="容器内"></a>容器内</h3><ul>
-<li><input disabled="" type="checkbox"> 同KIT一样，容器内执行syscall sequence，不过侧重点在mnt namespace；缺点：不一定能触发漏洞；没有创新点</li>
-<li><input checked="" disabled="" type="checkbox"> 容器内执行PoC，缺点在于PoC样本空间太少</li>
-<li>符号链接指向的文件，&#x2F;proc&#x2F;self&#x2F;fd等&#x2F;sys&#x2F;</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2024/01/04/sort/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/04/sort/" class="post-title-link" itemprop="url">sort</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-04 21:22:53 / 修改时间：21:24:39" itemprop="dateCreated datePublished" datetime="2024-01-04T21:22:53+08:00">2024-01-04</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -538,10 +184,9 @@
       <meta itemprop="name" content="upa4的窝">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/04/leetcode-easy/" class="post-title-link" itemprop="url">leetcode_easy</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          leetcode_easy
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -571,7 +216,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><h3 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h3><ol>
+        <h2 id="array"><a href="#array" class="headerlink" title="array"></a>array</h2><h3 id="移除元素"><a href="#移除元素" class="headerlink" title="移除元素"></a>移除元素</h3><ol>
 <li>快慢指针法</li>
 </ol>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">removeElement</span><span class="params">(nums []<span class="type">int</span>, val <span class="type">int</span>)</span></span> <span class="type">int</span>&#123;</span><br><span class="line">    slow := <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> fast:=<span class="number">0</span>;fast&lt;<span class="built_in">len</span>(nums);fast++&#123;</span><br><span class="line">        <span class="keyword">if</span> nums[fast] == val&#123;</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        &#125;</span><br><span class="line">        nums[slow] == nums[fast]</span><br><span class="line">        slow++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -664,248 +309,37 @@
 
 <p>没有什么好思路…<br>使用比较暴力的解法, 计算第一组和第二组的集合中各种和的组合，并将其(*-1)后的值记录在hash表中，然后计算第三组和第四组中和的组合并判断当前值是否在哈希表中，如果在，就计算。<br>ok, 看了答案也是这个思路，暴力出奇迹啊～</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/array/" rel="tag"># array</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2024/01/03/k8s/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/03/k8s/" class="post-title-link" itemprop="url">k8s</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-03 19:12:32 / 修改时间：20:26:17" itemprop="dateCreated datePublished" datetime="2024-01-03T19:12:32+08:00">2024-01-03</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>fxx曰：能记多少是多少</p>
-</blockquote>
-<h2 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h2><h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><p>在k8s中，每个pod都有一个ip地址，对于一个网站来说，如果某个后端的pod寄了，前端咋能知道新上任的后端pod的ip呢？</p>
-<p>在k8s中，可以将一个后端应用程序组暴露为一个Service。这样，无论后端应用程序的实际部署方式如何变化，外部客户端仍然可以通过Service访问后端应用程序，而无需关心其具体部署的细节。Service提供了反向代理的功能</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/01/03/k8s/" rel="prev" title="k8s">
+      <i class="fa fa-chevron-left"></i> k8s
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/01/04/sort/" rel="next" title="sort">
+      sort <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2023/12/30/cpp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/30/cpp/" class="post-title-link" itemprop="url">cpp</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-12-30 00:04:11" itemprop="dateCreated datePublished" datetime="2023-12-30T00:04:11+08:00">2023-12-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-01-24 20:59:50" itemprop="dateModified" datetime="2024-01-24T20:59:50+08:00">2024-01-24</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="将一个函数作为另一个函数的参数"><a href="#将一个函数作为另一个函数的参数" class="headerlink" title="将一个函数作为另一个函数的参数"></a>将一个函数作为另一个函数的参数</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title function_">funcName</span><span class="params">(type (*funcNameAsParam)(type,type), type param2, ...)</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(*funcNameAsParam)(param1, param2)</span><br></pre></td></tr></table></figure>
-
-<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>c++支持引用传递，通常被用到数组中</p>
-<p>当数据较大的时候，使用引用比较好</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp;</span><br><span class="line">    tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">100</span>,b=<span class="number">200</span>;</span><br><span class="line">    <span class="built_in">swap</span>(a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h4><p>通过函数原型的方式可以给函数设置默认值，⚠️函数定义不能设置为默认值</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> *<span class="title">left</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str, <span class="type">int</span> n = <span class="number">1</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="built_in">left</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">    <span class="built_in">left</span>(<span class="string">&quot;world&quot;</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">const</span> <span class="title">left</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str, <span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h4><p>函数特征标：参数数目以及类型&amp;&amp;参数的排列顺序</p>
-<p>函数重载要求函数的特征标不同</p>
-<p><em>类型引用和类型本身会被编译器视为同一特征标</em></p>
-<p><strong>匹配参数时</strong>，并不区分const和非const</p>
-<h4 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AnyType&gt;</span><br><span class="line"><span class="comment">//template &lt;class AnyType&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Swap</span><span class="params">(AnyType &amp;a, AnyType &amp;b)</span></span>&#123;</span><br><span class="line">    AnyType temp;</span><br><span class="line">    temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用上述的模板无法处理某些类型，比如结构，这时候可以为特定类型提供显化的模板，或者使用函数重载</p>
-<p>编译器的选择顺序：</p>
-<p>非模板函数&gt;具体显化&gt;模板函数</p>
-<p>区别：实例化和具体化</p>
-<p>显示实例化，由编译器根据模板创建</p>
-<blockquote>
-<p>template 函数返回类型 函数名&lt;模板类型&gt;(模板类型);</p>
-</blockquote>
-<p>显示具体化</p>
-<blockquote>
-<p>template &lt;&gt; 函数返回类型 函数名(&lt;模板类型&gt;)(模板类型);</p>
-</blockquote>
-<p>函数名后的模板类型可以省略。</p>
-<p>使用显示具体化声明的意思是不要使用模板来生成定义，而应该使用自己的函数定义。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://upaskun.github.io/2023/12/28/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="upas">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="upa4的窝">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/12/28/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-12-28 15:37:51" itemprop="dateCreated datePublished" datetime="2023-12-28T15:37:51+08:00">2023-12-28</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -958,6 +392,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#array"><span class="nav-number">1.</span> <span class="nav-text">array</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0"><span class="nav-number">1.1.</span> <span class="nav-text">移除元素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9"><span class="nav-number">2.</span> <span class="nav-text">有序数组的平方</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84"><span class="nav-number">2.1.</span> <span class="nav-text">长度最小的子数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5"><span class="nav-number">2.2.</span> <span class="nav-text">螺旋矩阵</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">双指针法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">4.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-number">4.1.</span> <span class="nav-text">206.反转链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#024-%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9"><span class="nav-number">4.2.</span> <span class="nav-text">024. 两两交换链表中的节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0019-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-number">4.3.</span> <span class="nav-text">~*0019. 删除链表的倒数第N个节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#160-%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4"><span class="nav-number">4.4.</span> <span class="nav-text">160.链表相交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="nav-number">4.5.</span> <span class="nav-text">~*142. 环形链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="nav-number">5.</span> <span class="nav-text">哈希表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D"><span class="nav-number">5.1.</span> <span class="nav-text">0242.有效的字母异位词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1002-%E6%9F%A5%E6%89%BE%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6"><span class="nav-number">5.2.</span> <span class="nav-text">1002. 查找常用字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86"><span class="nav-number">5.3.</span> <span class="nav-text">349. 两个数组的交集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0202-%E5%BF%AB%E4%B9%90%E6%95%B0"><span class="nav-number">5.4.</span> <span class="nav-text">0202. 快乐数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="nav-number">5.5.</span> <span class="nav-text">1. 两数之和</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0"><span class="nav-number">5.6.</span> <span class="nav-text">454. 四数相加</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

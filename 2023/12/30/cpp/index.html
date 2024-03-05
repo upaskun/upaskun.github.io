@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"upaskun.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="函数将一个函数作为另一个函数的参数定义1type funcName(type (*funcNameAsParam)(type,type), type param2, ...);  使用1(*funcNameAsParam)(param1, param2)">
+  <meta name="description" content="函数将一个函数作为另一个函数的参数定义1type funcName(type (*funcNameAsParam)(type,type), type param2, ...);  使用1(*funcNameAsParam)(param1, param2)  引用c++支持引用传递，通常被用到数组中 当数据较大的时候，使用引用比较好 12345678910111213&#x2F;&#x2F;定义void swap(in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cpp">
 <meta property="og:url" content="https://upaskun.github.io/2023/12/30/cpp/index.html">
 <meta property="og:site_name" content="upa4的窝">
-<meta property="og:description" content="函数将一个函数作为另一个函数的参数定义1type funcName(type (*funcNameAsParam)(type,type), type param2, ...);  使用1(*funcNameAsParam)(param1, param2)">
+<meta property="og:description" content="函数将一个函数作为另一个函数的参数定义1type funcName(type (*funcNameAsParam)(type,type), type param2, ...);  使用1(*funcNameAsParam)(param1, param2)  引用c++支持引用传递，通常被用到数组中 当数据较大的时候，使用引用比较好 12345678910111213&#x2F;&#x2F;定义void swap(in">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-29T16:04:11.000Z">
-<meta property="article:modified_time" content="2023-12-30T02:45:15.190Z">
+<meta property="article:modified_time" content="2024-01-24T12:59:50.864Z">
 <meta property="article:author" content="upas">
 <meta name="twitter:card" content="summary">
 
@@ -188,10 +188,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-12-30 00:04:11 / 修改时间：10:45:15" itemprop="dateCreated datePublished" datetime="2023-12-30T00:04:11+08:00">2023-12-30</time>
+              <time title="创建时间：2023-12-30 00:04:11" itemprop="dateCreated datePublished" datetime="2023-12-30T00:04:11+08:00">2023-12-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-24 20:59:50" itemprop="dateModified" datetime="2024-01-24T20:59:50+08:00">2024-01-24</time>
+              </span>
 
           
 
@@ -207,6 +213,34 @@
         <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="将一个函数作为另一个函数的参数"><a href="#将一个函数作为另一个函数的参数" class="headerlink" title="将一个函数作为另一个函数的参数"></a>将一个函数作为另一个函数的参数</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title function_">funcName</span><span class="params">(type (*funcNameAsParam)(type,type), type param2, ...)</span>;</span><br></pre></td></tr></table></figure>
 
 <h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(*funcNameAsParam)(param1, param2)</span><br></pre></td></tr></table></figure>
+
+<h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><p>c++支持引用传递，通常被用到数组中</p>
+<p>当数据较大的时候，使用引用比较好</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span> &amp;a, <span class="type">int</span> &amp;b)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp;</span><br><span class="line">    tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">100</span>,b=<span class="number">200</span>;</span><br><span class="line">    <span class="built_in">swap</span>(a,b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h4><p>通过函数原型的方式可以给函数设置默认值，⚠️函数定义不能设置为默认值</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> *<span class="title">left</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str, <span class="type">int</span> n = <span class="number">1</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//...</span></span><br><span class="line">    <span class="built_in">left</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">    <span class="built_in">left</span>(<span class="string">&quot;world&quot;</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">const</span> <span class="title">left</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str, <span class="type">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="comment">//..</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h4><p>函数特征标：参数数目以及类型&amp;&amp;参数的排列顺序</p>
+<p>函数重载要求函数的特征标不同</p>
+<p><em>类型引用和类型本身会被编译器视为同一特征标</em></p>
+<p><strong>匹配参数时</strong>，并不区分const和非const</p>
+<h4 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> AnyType&gt;</span><br><span class="line"><span class="comment">//template &lt;class AnyType&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Swap</span><span class="params">(AnyType &amp;a, AnyType &amp;b)</span></span>&#123;</span><br><span class="line">    AnyType temp;</span><br><span class="line">    temp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用上述的模板无法处理某些类型，比如结构，这时候可以为特定类型提供显化的模板，或者使用函数重载</p>
+<p>编译器的选择顺序：</p>
+<p>非模板函数&gt;具体显化&gt;模板函数</p>
+<p>区别：实例化和具体化</p>
+<p>显示实例化，由编译器根据模板创建</p>
+<blockquote>
+<p>template 函数返回类型 函数名&lt;模板类型&gt;(模板类型);</p>
+</blockquote>
+<p>显示具体化</p>
+<blockquote>
+<p>template &lt;&gt; 函数返回类型 函数名(&lt;模板类型&gt;)(模板类型);</p>
+</blockquote>
+<p>函数名后的模板类型可以省略。</p>
+<p>使用显示具体化声明的意思是不要使用模板来生成定义，而应该使用自己的函数定义。</p>
+
     </div>
 
     
@@ -286,7 +320,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">将一个函数作为另一个函数的参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">使用</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">将一个函数作为另一个函数的参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="nav-number">1.1.4.</span> <span class="nav-text">默认值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD"><span class="nav-number">1.1.5.</span> <span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.1.6.</span> <span class="nav-text">函数模板</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -300,9 +334,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
